@@ -6,4 +6,4 @@ COPY package*.json ./
 USER uwu
 RUN npm install
 COPY --chown=uwu:uwu . .
-CMD ["sh", "-c", "node","app.js"]
+CMD ["node","app.js"]

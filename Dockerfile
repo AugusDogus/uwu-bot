@@ -1,8 +1,9 @@
 FROM nikolaik/python-nodejs:latest
-RUN mkdir -p /home/node/uwu/node_modules && chown -R node:node /home/node/uwu
+RUN groupadd uwu && useradd --gid uwu --shell /bin/bash --create-home uwu
+RUN mkdir -p /home/node/uwu/node_modules && chown -R uwu:uwu /home/node/uwu
 WORKDIR /home/node/uwu
 COPY package*.json ./
-USER node
+USER uwu
 RUN npm install
-COPY --chown=node:node . .
+COPY --chown=uwu:uwu . .
 CMD ["sh", "-c", "node","app.js"]

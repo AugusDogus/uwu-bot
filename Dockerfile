@@ -5,5 +5,5 @@ WORKDIR /home/uwu/uwu
 COPY package*.json ./
 USER uwu
 RUN npm install
-COPY --chown=node:uwu . .
+COPY --chown=uwu:uwu . .
 CMD ["sh", "-c", "node","app.js"]

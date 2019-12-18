@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const client  = new Discord.Client();
+const discowizID = "450830933734719508"
 
 client.on("ready", () => {
     console.log("uwu");
@@ -15,7 +16,10 @@ client.on("message", (message) => {
             message.channel.send('uwu');
         }
     }
-
+   	else if(!message.sender === discowizID) {
+		message.channel.send('UwU I love you Senpi!');
+	}
+   
 });
 
 const translate = ((message) => {

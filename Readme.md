@@ -6,9 +6,9 @@
 
 ## Requirements
 
--   Node.js (for development)
 -   Docker
 -   A [discord bot](https://discordapp.com/developers/applications/) token
+-   Node.js (for development)
 
 ## Running from Docker Hub
 

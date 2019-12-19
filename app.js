@@ -43,7 +43,7 @@ const fetchMessage = (message) => {
                 messages = Array.from(messages.values());
                 // Find the message sent before the !uwu command was sent
                 for (let i = 0; i < messages.length; i++) {
-                    if (messages[i] === message) {
+                    if (messages[parseInt(i)] === message) {
                         resolve(messages[i+1]);
                     }
                 }
